@@ -6,6 +6,17 @@
 import random
 
 #2. Create an interface function that asks player to play.
+def interface():
+    print("Welcome to Wordle! Would you like to play?")
+    while True:
+        ans = str(input("[Y/N] ")).upper()
+        if ans == "Y":
+            return True
+        elif ans == "N":
+            print("\n---Exit---")
+            return False
+        else:
+            print("Invalid input. Please try again.")
 
 #3. Create a display function to display each letter of a 5-letter word.
 
