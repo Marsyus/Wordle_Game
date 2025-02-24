@@ -54,12 +54,12 @@ def wordle():
             guesses.append(guess)
             attempts -= 1
 
-	#4.4 Determine which letter of the guessed letter coincides with the correct word.
+	    #4.4 Determine which letter of the guessed letter coincides with the correct word.
 	    for h in guesses:
                 right_match = [char if char == letter else " " for char, letter in zip(h, word)]
                 wrong_match = [char if char in word and char not in right_match else " " for char in h]
 
-	#4.5 Update the display. If the guess was correct, end game here (Win). Else, continue to 4.6.
+	    #4.5 Update the display. If the guess was correct, end game here (Win). Else, continue to 4.6.
 	    for g in guesses:
                 print(row(g))
             for i in range(6 - len(guesses)):
@@ -68,7 +68,7 @@ def wordle():
                 print(f"\nThe correct word was: {word}\nCongratulations! You guessed the word!")
                 return
 
-	#4.6 Display whether the guessed letter was in the right or wrong slot (and from which column to avoid confusion).
+	    #4.6 Display whether the guessed letter was in the right or wrong slot (and from which column to avoid confusion).
 	    else:
                 print("\nColumn      -  1  2  3  4  5")
                 print("Right slot  - ", "  ".join(right_match))
