@@ -3,6 +3,7 @@
 # Marxius Ivan Adolf Denniel
 
 #1. Import random for picking random words in a list.
+import random
 
 #2. Create an interface function that asks player to play.
 
