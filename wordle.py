@@ -29,7 +29,7 @@ def wordle():
     words = ["ABODE", "ACUTE", "AGENT", "ALARM", "AMBER", "APPLE", "BEACH", "BLAZE", "BLEND", "BRAVE", "BREAD", "BRISK", "BRUSH", "BUNCH", "BUNNY", "CHAIR", "CHART", "CHIME", "CLOCK", "CLOUD", "CLOVE", "CRISP", "DREAM", "DRESS", "DRIFT", "DROWN", "DWELL", "EAGLE", "EARTH", "ELOPE", "EMBER", "EXCEL", "FABLE", "FLAME", "FEAST", "FLINT", "FLOOR", "FORGE", "FRESH", "FROST", "GLASS", "GLOVE", "GRAPE", "GRASP", "GRIMY", "GUSTO", "HAPPY", "HATCH", "HOIST", "HOUSE", "HUMID", "INBOX", "INDEX", "INFER", "IVORY", "JOINT", "JOKER", "JOLLY", "JOUST", "KAPPA", "KIOSK", "KNACK", "KRAUT", "LAPSE", "LATCH", "LEAFY", "LEMON", "LIGHT", "LODGE", "LUCKY", "MANGO", "MAPLE", "MERCY", "MIRTH", "MOUNT", "MUSIC", "NEXUS", "NIFTY", "NOMAD", "NUDGE", "OCEAN", "OCTET", "OPINE", "OUTER", "PAINT", "PAPER", "PANDA", "PENCIL", "PIQUE", "PLANE", "PLANT", "PLATE", "PLUME", "POWER", "PRINT", "PRISM", "PULSE", "QUAIL", "QUASH", "QUIET", "QUILT", "QUIRK", "REACT", "RIGID", "RINSE", "ROACH", "RULER", "SHELL", "SHIRT", "SHOES", "SLANT", "SLOPE", "SMILE", "SOUND", "SPOON", "STARS", "STONE", "STONY", "STORY", "SWEET", "TABLE", "THORN", "TIGER", "TRACE", "TRAIN", "TRUST", "TWEAK", "ULCER", "UNITE", "URBAN", "USHER", "VAPOR", "VERGE", "VIEWS", "VIVID", "VIXEN", "WALTZ", "WATER", "WHEAT", "WOVEN", "WRECK", "XENON", "XEROX", "YACHT", "YIELD", "YODEL", "ZEBRA", "ZESTS", "ZESTY", "ZONED"]
     random_word = random.randint(0, 149)
     word = words[random_word]
-    empty = [" "] * 5 
+    empty = [" "] * 5
     attempts = 6
     guesses = []
 
@@ -41,8 +41,8 @@ def wordle():
     while True:
         if attempts == 0:
             break
-        
-        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"    
+
+        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         guess = input("\nEnter a 5-letter word: ").upper()
         print()
 
@@ -59,7 +59,7 @@ def wordle():
 	    for h in guesses:
                 right_match = [char if char == letter else " " for char, letter in zip(h, word)]
                 wrong_match = [char if char in word and char not in right_match else " " for char in h]
-                
+
 	#4.5 Update the display. If the guess was correct, end game here (Win). Else, continue to 4.6.
 	    for g in guesses:
                 print(row(g))
@@ -73,7 +73,7 @@ def wordle():
 	    else:
                 print("\nColumn      -  1  2  3  4  5")
                 print("Right slot  - ", "  ".join(right_match))
-                print("Wrong slot  - ", "  ".join(wrong_match)) 
+                print("Wrong slot  - ", "  ".join(wrong_match))
 
     #4.7 If all 6 rows are filled without guessing the correct word, end game here (Lose).
     print(f"\nGame over! The correct word was: {word}")
@@ -92,3 +92,7 @@ def continues():
             print("Invalid input. Please try again.")   
 
 #6. Call functions and loop to run the game.
+if interface():
+    wordle()
+    while continues():
+	wordle()
