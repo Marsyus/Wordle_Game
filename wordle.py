@@ -20,7 +20,7 @@ def interface():
 
 #3. Create a display function to display each letter of a 5-letter word.
 def row(x):
-    rows = f"| {x[0]} | {x[1]} | {x[2]} | {x[3]} | {x[4]} ]"
+    rows = f"[ {x[0]} | {x[1]} | {x[2]} | {x[3]} | {x[4]} ]"
     return rows
 
 #4. Create the main wordle game function.
