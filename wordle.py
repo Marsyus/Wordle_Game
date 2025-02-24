@@ -13,7 +13,7 @@ def interface():
         if ans == "Y":
             return True
         elif ans == "N":
-            print("\n---Exit---")
+            print("\n--- Exit ---")
             return False
         else:
             print("Invalid input. Please try again.")
