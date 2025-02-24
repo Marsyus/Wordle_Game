@@ -27,8 +27,7 @@ def row(x):
 def wordle():
     #4.1 Make a list of 5-letter words and randomly pick one for each wordle.
     words = ["ABODE", "ACUTE", "AGENT", "ALARM", "AMBER", "APPLE", "BEACH", "BLAZE", "BLEND", "BRAVE", "BREAD", "BRISK", "BRUSH", "BUNCH", "BUNNY", "CHAIR", "CHART", "CHIME", "CLOCK", "CLOUD", "CLOVE", "CRISP", "DREAM", "DRESS", "DRIFT", "DROWN", "DWELL", "EAGLE", "EARTH", "ELOPE", "EMBER", "EXCEL", "FABLE", "FLAME", "FEAST", "FLINT", "FLOOR", "FORGE", "FRESH", "FROST", "GLASS", "GLOVE", "GRAPE", "GRASP", "GRIMY", "GUSTO", "HAPPY", "HATCH", "HOIST", "HOUSE", "HUMID", "INBOX", "INDEX", "INFER", "IVORY", "JOINT", "JOKER", "JOLLY", "JOUST", "KAPPA", "KIOSK", "KNACK", "KRAUT", "LAPSE", "LATCH", "LEAFY", "LEMON", "LIGHT", "LODGE", "LUCKY", "MANGO", "MAPLE", "MERCY", "MIRTH", "MOUNT", "MUSIC", "NEXUS", "NIFTY", "NOMAD", "NUDGE", "OCEAN", "OCTET", "OPINE", "OUTER", "PAINT", "PAPER", "PANDA", "PENCIL", "PIQUE", "PLANE", "PLANT", "PLATE", "PLUME", "POWER", "PRINT", "PRISM", "PULSE", "QUAIL", "QUASH", "QUIET", "QUILT", "QUIRK", "REACT", "RIGID", "RINSE", "ROACH", "RULER", "SHELL", "SHIRT", "SHOES", "SLANT", "SLOPE", "SMILE", "SOUND", "SPOON", "STARS", "STONE", "STONY", "STORY", "SWEET", "TABLE", "THORN", "TIGER", "TRACE", "TRAIN", "TRUST", "TWEAK", "ULCER", "UNITE", "URBAN", "USHER", "VAPOR", "VERGE", "VIEWS", "VIVID", "VIXEN", "WALTZ", "WATER", "WHEAT", "WOVEN", "WRECK", "XENON", "XEROX", "YACHT", "YIELD", "YODEL", "ZEBRA", "ZESTS", "ZESTY", "ZONED"]
-    random_word = random.randint(0, 149)
-    word = words[random_word]
+    word = words[random.randint(0, 149)]
     empty = [" "] * 5
     attempts = 6
     guesses = []
