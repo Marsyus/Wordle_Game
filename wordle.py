@@ -79,5 +79,16 @@ def wordle():
     print(f"\nGame over! The correct word was: {word}")
 
 #5. Create a function that asks player to continue playing.
+def continues():
+    print("\nWould you like to play again?")
+    while True:
+        ans = str(input("[Y/N] ")).upper()
+        if ans == "Y":
+            return True
+        elif ans == "N":
+            print("\n--- Exit ---")
+            return False
+        else:
+            print("Invalid input. Please try again.")   
 
 #6. Call functions and loop to run the game.
